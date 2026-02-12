@@ -10,14 +10,40 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
 
   <!-- imported libraries go here -->
+   <script type="importmap">
+    {
+      "imports": {
+        "mustachejs": "https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.2.0/mustache.min.js",
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+      }
+    }
+  </script>
   
 </head>
 <body>
+
+  <template id="movieCardTemplate">
+    {{#movies}}
+    <div class="col-6">
+      <div class="card">
+        <img src="{{Poster}}" alt="{{Title}} Poster" class="card-img-top">
+        <div class="card-body">
+          <h2 class="card-title">{{Title}}</h2>
+          <p class="card-text">{{Year}}</p>
+          <a href="https://www.imdb.com/title/{{imdbID}}" class="btn btn-primary">More info on IMDB</a>
+        </div>
+      </div>
+    </div>
+    {{/movies}}
+  </template>
+
   <div class="container">
     <h1>Movie List</h1>
 
     <div id="results" class="row">
-     
+
+      <!-- VUE JS -->
+     <!-- {{ message }} -->
 
     </div>
   </div>
@@ -25,6 +51,18 @@
   <script src="javascript/application.js" type="module"></script>
 </body>
 </html>
+
+
+<!-- <div class="col-6">
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/M/MV5BZTBmYWY0ZmEtMmM2Yi00Njk1LTkxNjEtYmNhMTFhYzA3ODE0XkEyXkFqcGc@._V1_SX300.jpg" alt="Tom Thumb Poster" class="card-img">
+    <div class="card-body">
+      <h2 class="card-title">Tom Thumb</h2>
+      <p class="card-text">1958</p>
+      <a href="https://www.imdb.com/title/tt0052427" class="btn btn-primary">More info on IMDB</a>
+    </div>
+  </div>
+</div> -->
 
 
 
