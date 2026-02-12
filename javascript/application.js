@@ -1,7 +1,7 @@
 import Mustache from "mustachejs";
 import { createApp } from "vue";
 
-const url = "http://www.omdbapi.com/?s=thumb&apikey=adf1f2d7"
+const url = "https://www.omdbapi.com/?s=thumb&apikey=adf1f2d7"
 
 // console.log("hi from application js");
 
